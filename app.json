@@ -1,13 +1,13 @@
 {
   "pages": [
+    "pages/guide/guide",
     "pages/index/index",
-    "pages/guide/logs",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
