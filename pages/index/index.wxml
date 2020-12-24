@@ -1,19 +1,58 @@
-<view >
-    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
-        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">健康</view>
-        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">情感</view>
-        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">职场</view>
-        <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">育儿</view>
-        <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">纠纷</view>
-        <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">青葱</view>
-        <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">全部</view>
-        <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">其他</view>
+<view>
+    <!-- 懒人早读 头部信息 -->
+    <view class="index-container">
+        <view class="index-head">
+            <text class="index-title">懒人早读</text>
+            <view style="white-space:pre-wrap"></view>
+            <text class="index-flush">1分钟前更新</text>
+        </view>
+        <image class="img-show" src="index-show.png"></image>
+    </view>
+        <!-- 懒人早读 导航列表 -->
+    <scroll-view scroll-x="true" class="tab" scroll-left="{{scrollLeft}}">
+        <view class="tab-title">
+            <image class="img-tab" src="baidu.png"></image>
+            <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">百度</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="weibo.png"></image>
+            <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">微博</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="zhihu.png"></image>
+            <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">知乎</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="bzhan.png"></image>
+            <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">B站</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="douyin.png"></image>
+            <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">抖音</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="maoyan.png"></image>
+            <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">猫眼</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="36kr.png"></image>
+            <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">36Kr</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="azhan.png"></image>
+            <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">A站</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="juejin.png"></image>
+            <view class="tab-item {{currentTab==8?'active':''}}" data-current="8" bindtap="swichNav">掘金</view>
+        </view>
     </scroll-view>
+    <!--  懒人早读 内容区域  -->
     <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
      style="height:{{winHeight}}rpx">
-        <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}">
+        <swiper-item wx:for="{{[0,1,2,3,4,5,6,7,8]}}">
             <scroll-view scroll-y="true" class="scoll-h" >
-                <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
+                <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this">
                     <view class="item-ans">
                         <view class="avatar">
                             <image class="img" src="icon.jpg"></image>

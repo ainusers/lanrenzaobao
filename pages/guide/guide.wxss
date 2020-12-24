@@ -1,5 +1,12 @@
 /**guide.wxss**/
 
+/* icon 控制 */
+.guide-icon {
+  height: 50rpx;
+  width: 50rpx;
+  padding-right: 30rpx;
+}
+
 /* 设置引导页字体/位置 */
 .usermotto {
   position: fixed;
@@ -7,5 +14,6 @@
   bottom: 100rpx;
   left: 0;
   right: 0;
+  font-size: 40rpx;
   font-family: cursive;
 }

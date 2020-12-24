@@ -1,17 +1,8 @@
-/* 懒人早读 头部信息 */
-.index-container{position: fixed;top: 0rpx;left: 0rpx; height: 185rpx;width: 100vw; background: #2f7af1;z-index: 99;}
-.index-head{height: 5rpx; width: 30vw;padding-left: 60rpx;}
-.index-title{color: #fff; font-weight: bold;letter-spacing: 8rpx;}
-.index-flush{color: #fff; font-size: 12px;letter-spacing: 4rpx;}
-.img-show{height: 200rpx; width:300rpx;float: right;}
-
-/* 懒人早读 导航列表 */
-.tab{height: 140rpx;width: 100%; overflow: hidden;line-height: 40rpx;background: #F7F7F7; font-size: 16px; white-space: nowrap;position: fixed;top: 150rpx;left: 0rpx; z-index: 99;border-radius: 20px 20px 0px 0px;}
-.tab-title{display: flex;margin: 0rpx 36rpx;display: inline-block;}
-.img-tab{height: 80rpx;width: 80rpx;}
+.tab-h{
+  height: 80rpx;width: 100%; box-sizing: border-box;overflow: hidden;line-height: 80rpx;background: #F7F7F7; font-size: 16px; white-space: nowrap;position: fixed;top: 0; left: 0; z-index: 99;}
+.tab-item{margin:0 36rpx;display: inline-block;}
 .tab-item.active{color: #4675F9;position: relative;}
-
-.tab-content{margin-top: 320rpx;}
+.tab-item.active:after{ content: "";display: block;height: 8rpx;width: 52rpx;background: #4675F9;position: absolute; bottom: 0;left: 5rpx;border-radius: 16rpx;}
 .item-ans{ width: 100%;display: flex; flex-grow: row no-wrap;justify-content: space-between; padding: 30rpx;box-sizing: border-box; height: 180rpx;align-items: center;border-bottom: 1px solid #F2F2F2;}
 .avatar{width: 100rpx;height: 100rpx;position: relative;padding-right: 30rpx;}
 .avatar .img{width: 100%;height: 100%;}
@@ -19,4 +10,5 @@
 .expertInfo{font-size: 12px;flex-grow: 2;color: #B0B0B0;line-height: 1.5em;}
 .expertInfo .name{font-size: 16px;color:#000;margin-bottom: 6px;}
 .askBtn{ width: 120rpx;height: 60rpx;line-height: 60rpx;text-align: center;font-size: 14px; border-radius: 60rpx;border: 1px solid #4675F9; color:#4675F9;}
+.tab-content{margin-top: 80rpx;}
 .scoll-h{height: 100%;}
