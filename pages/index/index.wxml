@@ -19,42 +19,46 @@
             <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">微博</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="zhihu.png"></image>
-            <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">知乎</view>
-        </view>
-        <view class="tab-title">
-            <image class="img-tab" src="bzhan.png"></image>
-            <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">B站</view>
-        </view>
-        <view class="tab-title">
             <image class="img-tab" src="douyin.png"></image>
-            <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">抖音</view>
+            <view class="tab-item {{currentTab==2?'active':''}}" data-current="4" bindtap="swichNav">抖音</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="maoyan.png"></image>
-            <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">猫眼</view>
+            <image class="img-tab" src="zhihu.png"></image>
+            <view class="tab-item {{currentTab==3?'active':''}}" data-current="2" bindtap="swichNav">知乎</view>
         </view>
         <view class="tab-title">
             <image class="img-tab" src="36kr.png"></image>
-            <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">36Kr</view>
+            <view class="tab-item {{currentTab==4?'active':''}}" data-current="6" bindtap="swichNav">36Kr</view>
         </view>
         <view class="tab-title">
             <image class="img-tab" src="azhan.png"></image>
-            <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">A站</view>
+            <view class="tab-item {{currentTab==5?'active':''}}" data-current="7" bindtap="swichNav">A站</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="bzhan.png"></image>
+            <view class="tab-item {{currentTab==6?'active':''}}" data-current="3" bindtap="swichNav">B站</view>
         </view>
         <view class="tab-title">
             <image class="img-tab" src="juejin.png"></image>
-            <view class="tab-item {{currentTab==8?'active':''}}" data-current="8" bindtap="swichNav">掘金</view>
+            <view class="tab-item {{currentTab==7?'active':''}}" data-current="8" bindtap="swichNav">掘金</view>
+        </view>
+        <view class="tab-title">
+            <image class="img-tab" src="maoyan.png"></image>
+            <view class="tab-item {{currentTab==8?'active':''}}" data-current="5" bindtap="swichNav">猫眼</view>
         </view>
     </scroll-view>
     <!--  懒人早读 内容区域  -->
-    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
-     style="height:{{winHeight}}rpx">
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
         <swiper-item wx:for="{{[0,1,2,3,4,5,6,7,8]}}">
-            <scroll-view scroll-y="true" class="scoll-h" >
-                <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this">
-                    <view class="item-ans">
-                        <view class="avatar">
+            <scroll-view scroll-y="true">
+                <!-- <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this"> -->
+                <block wx:for="{{initData[index]}}" wx:key="index">
+                    <view class="item-content">
+                        <view class="item-left">{{item.score}}</view>
+                        <view class="item-middle">{{item.title}}</view>
+                        <view class="item-right">{{item.hot}}</view>
+                        <!-- <view class="name">欢颜</view>
+                            <view class="avatar">
                             <image class="img" src="icon.jpg"></image>
                         </view>
                         <view class="expertInfo">
@@ -62,7 +66,7 @@
                             <view class="tag">知名情感博主</view>
                             <view class="answerHistory">134个回答，2234人听过 </view>
                         </view>
-                        <navigator url="/pages/askExpert/expertDetail" class="askBtn">问TA</navigator> 
+                        <navigator url="/pages/askExpert/expertDetail" class="askBtn">问TA</navigator>  -->
                     </view>
                 </block>
             </scroll-view>

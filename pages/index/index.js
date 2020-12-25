@@ -4,13 +4,7 @@ Page({
         winHeight:"",//窗口高度
         currentTab:0, //预设当前项的值
         scrollLeft:0, //tab标题的滚动条位置
-        expertList:[{ //假数据
-            img:"avatar.png",
-            name:"欢顔",
-            tag:"知名情感博主",
-            answer:134,
-            listen:2234
-        }]
+        initData: []
     },
     // 滚动切换标签样式
     switchTab:function(e){
@@ -20,6 +14,21 @@ Page({
         });
         that.checkCor();
     },
+    // 点击或长按复制文本连接
+    // copyLink:function(){
+    //     var that = this;
+    //     var currentIndex = e.currentTarget.dataset.idx;
+    //     console.log(currentIndex); 
+    //     console.log(that.initData[currentIndex].link)
+    //     wx.setClipboardData({
+    //         data: that.initData[currentIndex].link,
+    //         success: function (res) {
+    //             wx.showToast({
+    //                 title: '复制成功',
+    //             });
+    //         }
+    //     });
+    // },
     // 点击标题切换当前页时改变样式
     swichNav:function(e){
 　　　　　var that = this;　
@@ -59,6 +68,17 @@ Page({
                 });  
             }  
         });
+        // 初始化热点数据
+        wx.request({
+            url: 'http://192.168.2.114:8888/service/init',
+            header: {'content-type': 'application/json'},
+            success: res => {
+                console.log(res.data)
+                this.setData({
+                    initData: res.data
+                })
+            }
+        })
     },  
     footerTap:app.footerTap
 })
