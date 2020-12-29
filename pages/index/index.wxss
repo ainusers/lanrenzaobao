@@ -13,12 +13,6 @@
 
 .tab-content{margin-top: 290rpx;}
 .item-content{font-size: 12px;display: flex;justify-content: space-between;box-sizing: border-box; height: 90rpx;align-items: center;border-bottom: 1px solid #F2F2F2;}
-.item-middle{
-  display: -webkit-box,
-  word-break: break-all,
-  text-overflow: ellipsis,
-  font-size: 18rpx,
-  overflow: hidden,
-  -webkit-box-orient: vertical,
-  -webkit-line-clamp:3
- }
+.item-middle{width: 70%;
+  /* display: flex;justify-content: center;align-items: center; */
+  display: -webkit-box;overflow: hidden;text-overflow: ellipsis;word-break: break-all;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
