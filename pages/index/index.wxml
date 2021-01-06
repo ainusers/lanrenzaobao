@@ -48,25 +48,29 @@
         </view>
     </scroll-view>
     <!--  懒人早读 内容区域  -->
-    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:80vh">
         <swiper-item wx:for="{{[0,1,2,3,4,5,6,7,8]}}">
             <scroll-view scroll-y="true">
-                <!-- <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="*this"> -->
+                <view wx:if="{{showRefresh}}" style='width:100%;position:relative;padding:60rpx 0;'>
+            <view class="text-gray" style='position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);'>
+            <view wx:if="{{freshStatus == 'fresh'}}" class="flex">
+                <view class="lzy-loading"></view>
+                <view>刷新中...</view>
+            </view>
+            <view class="text" wx:elif="{{freshStatus == 'more'}}">
+                <!-- 使用到了 colorUI 下拉箭头图标 -->
+                <text class="cuIcon-refresharrow"></text> 继续下拉刷新
+            </view>
+            <view class="text" wx:else>
+                释放刷新
+            </view>
+            </view>
+        </view>
                 <block wx:for="{{initData[index]}}" wx:key="index">
                     <view class="item-content">
                         <view class="item-left">{{item.score}}</view>
                         <view class="item-middle">{{item.title}}</view>
                         <view class="item-right">{{item.hot}}</view>
-                        <!-- <view class="name">欢颜</view>
-                            <view class="avatar">
-                            <image class="img" src="icon.jpg"></image>
-                        </view>
-                        <view class="expertInfo">
-                            <view class="name">欢颜</view>
-                            <view class="tag">知名情感博主</view>
-                            <view class="answerHistory">134个回答，2234人听过 </view>
-                        </view>
-                        <navigator url="/pages/askExpert/expertDetail" class="askBtn">问TA</navigator>  -->
                     </view>
                 </block>
             </scroll-view>

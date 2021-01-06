@@ -11,8 +11,34 @@
 .img-tab{height: 80rpx;width: 80rpx;}
 .tab-item.active{color: #4675F9;position: relative;}
 
+/* 懒人早读 内容区域 */
 .tab-content{margin-top: 290rpx;}
-.item-content{font-size: 12px;display: flex;justify-content: space-between;box-sizing: border-box; height: 90rpx;align-items: center;border-bottom: 1px solid #F2F2F2;}
+.item-content{font-size: 12px;display: flex;justify-content: space-between;box-sizing: border-box; height: 8vh;align-items: center;border-bottom: 1px solid #F2F2F2;}
+.item-left{padding-left: 15px;}
 .item-middle{width: 70%;
   /* display: flex;justify-content: center;align-items: center; */
   display: -webkit-box;overflow: hidden;text-overflow: ellipsis;word-break: break-all;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+.item-right{padding-right: 15px;}
+
+  /* 懒人早读 下拉刷新 */
+  .lzy-loading{
+    margin-right: 20rpx;
+    float: left;
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    border: 1px solid #f0f0f0;
+    border-left: 1px solid #6190E8;
+    animation: load 1s linear infinite;
+    -webkit-animation: load 1s linear infinite;
+  }
+  @-webkit-keyframes load
+  {
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+  }
+  @keyframes load
+  {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+  }
