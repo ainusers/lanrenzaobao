@@ -5,8 +5,26 @@ Page({
         currentTab:0, //预设当前项的值
         scrollLeft:0, //tab标题的滚动条位置
         initData: [],
-        freshStatus: 'more', // 当前刷新的状态
-        showRefresh: false   // 是否显示下拉刷新组件
+        triggered:true // 控制是否自定义刷新
+    },
+    // 下拉刷新
+    refresh(){
+      // setTimeout(()=>{
+      //   this.setData({
+      //     triggered:false
+      //   })
+      // },3000)
+      wx.request({
+        url: 'http://192.168.2.114:8888/service/refresh',
+        data:{type:'maoyan'},
+        header: {'content-type': 'application/json'},
+        success: res => {
+            console.log(res.data)
+            this.setData({
+              triggered:false
+            })
+        }
+    })
     },
     // 滚动切换标签样式
     switchTab:function(e){
@@ -81,56 +99,6 @@ Page({
                 })
             }
         })
-    },  
-    // 触摸开始
-    touchStart(e) {
-        this.setData({
-          startY: e.changedTouches[0].pageY,
-          freshStatus: 'more'
-        })
-      },
-      // 触摸移动
-      touchMove(e) {
-        let endY = e.changedTouches[0].pageY;
-        let startY = this.data.startY;
-        let dis = endY - startY;
-        // 判断是否下拉
-        if (dis <= 0) {
-          return;
-        }
-        let offsetTop = e.currentTarget.offsetTop;
-        if (dis > 20) {
-          this.setData({
-            showRefresh: true
-          }, () => {
-            if (dis > 50) {
-              this.setData({
-                freshStatus: 'end'
-              })
-            } else {
-              this.setData({
-                freshStatus: 'more'
-              })
-            }
-          })
-        } else {
-          this.setData({
-            showRefresh: false
-          })
-        }
-      },
-      // 触摸结束
-      touchEnd(e) {
-        if (this.data.freshStatus == 'end') {
-          // 延迟 500 毫秒，显示 “刷新中”，防止请求速度过快不显示
-          setTimeout(()=>{
-              this.getList(); // 获取最新列表数据
-          }, 500);
-        } else {
-          this.setData({
-            showRefresh: false
-          })
-        }
-      },
+    },
     footerTap:app.footerTap
 })
