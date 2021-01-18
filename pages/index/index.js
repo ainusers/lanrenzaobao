@@ -7,8 +7,37 @@ Page({
         initData: [], // 热点数据集
         triggered:true, // 控制是否自定义刷新
         isUpperPulled: false, // 判断是否为上拉操作
-        status: [1,1,1,1,1,1,1,1,1] // 管理当前模块下的page
+        status: [1,1,1,1,1,1,1,1,1], // 管理当前模块下的page
+        menulist:[{"id":"1","title":"顶部"}, // 浮动球数据
+                  {"id": "2","title": "分享"},
+                  {"id": "3","title": "反馈"}],
+        floatCircle:{"title": "菜单"},
+        showmenus:true, // 控制浮动球列表是否显示
+        topNum: 0,
     },
+    // 浮动按钮
+    // 点击浮动按钮：菜单
+    showclick:function(){
+        let isshow = !this.data.showmenus;
+        this.setData({showmenus: isshow})
+    },
+    // 点击具体的功能项
+    itemclick:function(e){
+        this.showclick();
+        let info = e.currentTarget.dataset.item;
+        // 回到顶部
+        if(info.title === '顶部'){
+            this.setData({topNum: this.data.topNum = 0})
+        }
+        // 小程序默认监听button，后期曲线救国
+        if(info.title === '分享'){}
+        if(info.title === '反馈'){
+            wx.navigateTo({
+                url: '/pages/logs/logs',
+            })
+        }
+    },
+    // 上拉加载
     getPageData(page) {
         wx.request({
             url: 'http://192.168.2.114:8888/service/page',
@@ -46,7 +75,6 @@ Page({
             })
             // 更新当前页page
             this.data.status[this.data.currentTab] = page + 1
-            console.log(this.data.status)
             this.getPageData(this.data.status[this.data.currentTab])
         }
     },

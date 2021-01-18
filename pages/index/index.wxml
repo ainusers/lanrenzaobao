@@ -6,44 +6,44 @@
             <view style="white-space:pre-wrap"></view>
             <text class="index-flush">1分钟前更新</text>
         </view>
-        <image class="img-show" src="index-show.png"></image>
+        <image class="img-show" src="../../images/index-show.png"></image>
     </view>
         <!-- 懒人早读 导航列表 -->
     <scroll-view scroll-x="true" class="tab" scroll-left="{{scrollLeft}}">
         <view class="tab-title">
-            <image class="img-tab" src="baidu.png"></image>
+            <image class="img-tab" src="../../images/baidu.png"></image>
             <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">百度</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="weibo.png"></image>
+            <image class="img-tab" src="../../images/weibo.png"></image>
             <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">微博</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="douyin.png"></image>
+            <image class="img-tab" src="../../images/douyin.png"></image>
             <view class="tab-item {{currentTab==2?'active':''}}" data-current="4" bindtap="swichNav">抖音</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="zhihu.png"></image>
+            <image class="img-tab" src="../../images/zhihu.png"></image>
             <view class="tab-item {{currentTab==3?'active':''}}" data-current="2" bindtap="swichNav">知乎</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="36kr.png"></image>
+            <image class="img-tab" src="../../images/36kr.png"></image>
             <view class="tab-item {{currentTab==4?'active':''}}" data-current="6" bindtap="swichNav">36Kr</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="azhan.png"></image>
+            <image class="img-tab" src="../../images/azhan.png"></image>
             <view class="tab-item {{currentTab==5?'active':''}}" data-current="7" bindtap="swichNav">A站</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="bzhan.png"></image>
+            <image class="img-tab" src="../../images/bzhan.png"></image>
             <view class="tab-item {{currentTab==6?'active':''}}" data-current="3" bindtap="swichNav">B站</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="juejin.png"></image>
+            <image class="img-tab" src="../../images/juejin.png"></image>
             <view class="tab-item {{currentTab==7?'active':''}}" data-current="8" bindtap="swichNav">掘金</view>
         </view>
         <view class="tab-title">
-            <image class="img-tab" src="maoyan.png"></image>
+            <image class="img-tab" src="../../images/maoyan.png"></image>
             <view class="tab-item {{currentTab==8?'active':''}}" data-current="5" bindtap="swichNav">猫眼</view>
         </view>
     </scroll-view>
@@ -52,7 +52,7 @@
         <swiper-item wx:for="{{[0,1,2,3,4,5,6,7,8]}}">
             <!-- 下拉刷新 (动画/文字 后续完善)-->
             <scroll-view scroll-y="true" refresher-enabled="true" bindrefresherrefresh="refresh" refresher-triggered="{{triggered}}"
-            bindscrolltolower="scrollToLower" scroll-with-animation="true" style="height:98%;">
+            bindscrolltolower="scrollToLower" scroll-with-animation="true" style="height:98%;" scroll-top="{{topNum}}">
                 <block wx:for="{{initData[index]}}" wx:key="index">
                     <view class="item-content">
                         <view class="item-left">{{item.score}}</view>
@@ -62,9 +62,20 @@
                 </block>
             </scroll-view>
             <!-- 上拉加载 (动画/文字 后续完善) -->
-            <!-- <view hidden="{{!showLoading}}">
-                <view class="cu-load bg-gray {{loadingState?'loading':'over'}}"></view>
-            </view> -->
         </swiper-item>
     </swiper>
+    <!-- 悬浮按钮 -->
+    <view class='menu_box'>
+        <view hidden='{{showmenus}}' class=''>
+            <block wx:for='{{menulist}}' wx:key='menulist'>
+                <view class='menu_main' catchtap='itemclick' data-item='{{item}}'>
+                    <!-- <button open-type="share"></button> -->
+                    <text class='menu_title'  hidden='{{floatCircle.title.length > 0 ? flase:true}}'>{{item.title}}</text>
+                </view>
+            </block>
+        </view>
+            <view catchtap='showclick' class='menu_main'>
+            <text class='menu_title' hidden='{{floatCircle.title.length > 0 ? flase:true}}'>{{floatCircle.title}}</text>
+        </view>
+    </view>
 </view>

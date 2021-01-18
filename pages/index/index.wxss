@@ -10,13 +10,17 @@
 .tab-title{display: flex;margin: 0rpx 36rpx;display: inline-block;}
 .img-tab{height: 80rpx;width: 80rpx;}
 .tab-item.active{color: #4675F9;position: relative;}
+.tab-item.tab-item{text-align: center;}
 
 /* 懒人早读 内容区域 */
 .tab-content{margin-top: 290rpx;}
 .item-content{font-size: 12px;display: flex;justify-content: space-between;box-sizing: border-box; height: 8vh;align-items: center;border-bottom: 1px solid #F2F2F2;}
 .item-left{padding-left: 15px;}
-.item-middle{width: 70%;
+.item-middle{width: 70%;padding-left: 15px;
 display: -webkit-box;overflow: hidden;text-overflow: ellipsis;word-break: break-all;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
 .item-right{padding-right: 15px;}
 
-/* 懒人早读 下拉刷新 */
+/* 懒人早读 悬浮按钮 */
+.menu_box{position: fixed;bottom: 200rpx;right: 30rpx;text-align: center;}
+.menu_main{width: 100rpx;height: 100rpx;background-color: #2f7af1;border-radius: 50%;}
+.menu_title{padding: 28rpx 0;display: block;text-align: center;font-size: 30rpx;margin: 5rpx auto;color: white;}
