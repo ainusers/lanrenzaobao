@@ -64,7 +64,7 @@
             <!-- 上拉加载 (动画/文字 后续完善) -->
         </swiper-item>
     </swiper>
-    <!-- 悬浮按钮 -->
+    <!-- 悬浮按钮 -->  
     <view class='menu_box'>
         <view hidden='{{showmenus}}' class=''>
             <block wx:for='{{menulist}}' wx:key='menulist'>
@@ -74,7 +74,7 @@
                 </view>
             </block>
         </view>
-            <view catchtap='showclick' class='menu_main'>
+        <view catchtap='showclick' class='menu_main'>
             <text class='menu_title' hidden='{{floatCircle.title.length > 0 ? flase:true}}'>{{floatCircle.title}}</text>
         </view>
     </view>

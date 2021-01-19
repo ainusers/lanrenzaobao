@@ -26,16 +26,10 @@ Page({
         this.showclick();
         let info = e.currentTarget.dataset.item;
         // 回到顶部
-        if(info.title === '顶部'){
-            this.setData({topNum: this.data.topNum = 0})
-        }
+        if(info.title === '顶部'){this.setData({topNum: this.data.topNum = 0})}
         // 小程序默认监听button，后期曲线救国
         if(info.title === '分享'){}
-        if(info.title === '反馈'){
-            wx.navigateTo({
-                url: '/pages/logs/logs',
-            })
-        }
+        if(info.title === '反馈'){wx.navigateTo({url: '/pages/record/record'})}
     },
     // 上拉加载
     getPageData(page) {

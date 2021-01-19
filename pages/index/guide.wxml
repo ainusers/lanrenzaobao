@@ -1,7 +1,0 @@
-<!--guide.wxml-->
-<view class="container">
-  <view class="usermotto">
-    <image class="guide-icon" src="icon.svg"></image>
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>

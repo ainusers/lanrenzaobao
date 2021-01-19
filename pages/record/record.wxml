@@ -1,0 +1,54 @@
+<!--pages/record/record.wxml-->
+<view class="flex-row">
+    <view class="flex-view-item">
+      <view class="model">
+        <image class="reasonImg" src="/images/quit.png"></image>
+        <text class="reason">页面闪退</text>
+      </view>
+    </view>
+    <view class="flex-view-item">
+      <view class="model">
+        <image class="reasonImg" src="/images/transform.png"></image>
+        <text class="reason">传输问题</text>
+      </view>
+    </view>
+    <view class="flex-view-item">
+      <view class="model">
+        <image class="reasonImg" src="/images/operation.png"></image>
+        <text class="reason">操作体验</text>
+      </view>
+    </view>
+    <view class="flex-view-item">
+      <view class="model">
+        <image class="reasonImg" src="/images/mei.png"></image>
+        <text class="reason">界面审美</text>
+      </view>
+    </view>
+    <view class="flex-view-item">
+      <view class="model">
+        <image class="reasonImg" src="/images/function.png"></image>
+        <text class="reason">功能建议</text>
+      </view>
+    </view>
+    <view class="flex-view-item">
+      <view class="model">
+        <image class="reasonImg" src="/images/other.png"></image>
+        <text class="reason">其他反馈</text>
+      </view>
+    </view>
+  </view>
+  <view class="middle">
+    <view class="record">我要反馈</view>
+    <textarea class="recordContent" maxlength="500" bindinput='listenInput' placeholder="您想说点什么?" />
+    <span class="wordwrap">{{number}}/500</span>
+  </view>
+  <view class="bottom">
+    <view class="concact">
+      <text class="way">联系方式</text>
+      <text class="communication">　注：手机号/微信/QQ</text>
+    </view>
+    <input class="concactContent" placeholder="请留下任一联系方式" bindinput="userNameInput"/>
+  </view>
+  <button class="commit" type="primary" plain="true">
+    <text class="commitContent">提交</text>
+  </button>
