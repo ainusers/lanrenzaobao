@@ -17,10 +17,10 @@
 /* 懒人早读 内容区域 */
 .tab-content{margin-top: 290rpx;}
 .item-content{font-size: 12px;display: flex;justify-content: space-between;box-sizing: border-box; height: 8vh;align-items: center;border-bottom: 1px solid #F2F2F2;}
-.item-left{padding-left: 15px;}
-.item-middle{width: 70%;padding-left: 15px;
+.item-left{width:50rpx;padding-left: 10rpx;padding-right: 30rpx;}
+.item-middle{width: 100vw;
 display: -webkit-box;overflow: hidden;text-overflow: ellipsis;word-break: break-all;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
-.item-right{padding-right: 15px;}
+.item-right{width:140rpx;text-align: right;padding-right: 10rpx;}
 
 /* 懒人早读 悬浮按钮 */
 .menu_box{position: fixed;bottom: 200rpx;right: 30rpx;text-align: center;}
