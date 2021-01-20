@@ -13,7 +13,8 @@ Page({
                   {"id": "3","title": "反馈"}],
         floatCircle:{"title": "菜单"},
         showmenus:true, // 控制浮动球列表是否显示
-        topNum: 0,
+        topNum: 0, // 距离顶部距离
+        count: '' // 数据多少分钟前更新
     },
     // 浮动按钮
     // 点击浮动按钮：菜单
@@ -148,6 +149,18 @@ Page({
                 console.log(res.data)
                 this.setData({
                     initData: res.data
+                })
+            }
+        })
+        // 开启轮询后台接口
+        wx.request({
+            url: 'http://192.168.2.114:8888/service/time',
+            header: {'content-type': 'application/json;charset=UTF-8;'},
+            method: 'GET',
+            success: res => {
+                console.log(res.data)
+                this.setData({
+                    count: res.data
                 })
             }
         })

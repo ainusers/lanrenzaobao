@@ -4,7 +4,7 @@
         <view class="index-head">
             <text class="index-title">懒人早读</text>
             <view style="white-space:pre-wrap"></view>
-            <text class="index-flush">1分钟前更新</text>
+            <text class="index-flush">{{count}}</text>
         </view>
         <image class="img-show" src="../../images/index-show.png"></image>
     </view>
