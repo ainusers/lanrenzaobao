@@ -10,7 +10,7 @@
 .middle{height: 36vh;width: 100%;}
 .record{font-size: 20px;font-weight: 500;padding-bottom: 20rpx;}
 .recordContent{background-color: #f8f9fd;width: 100%;height: 87%;border-radius: 25rpx;}
-.wordwrap{position:absolute;top: 61vh;right: 0rpx;}
+.wordwrap{position:absolute;top: 61vh;right: 10rpx;}
 
 /* 联系方式 */
 .bottom{height: 29vh;width: 100%;}

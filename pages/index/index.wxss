@@ -6,6 +6,8 @@
 .img-show{height: 200rpx; width:300rpx;float: right;}
 
 /* 懒人早读 导航列表 */
+/* 隐藏scroll-view滚动条 */
+::-webkit-scrollbar {width: 0;height: 0;color: transparent;} 
 .tab{height: 140rpx;width: 100%; overflow: hidden;line-height: 40rpx;background: #F7F7F7; font-size: 16px; white-space: nowrap;position: fixed;top: 150rpx;left: 0rpx; z-index: 99;border-radius: 20px 20px 0px 0px;}
 .tab-title{display: flex;margin: 0rpx 36rpx;display: inline-block;}
 .img-tab{height: 80rpx;width: 80rpx;}
@@ -24,4 +26,4 @@ display: -webkit-box;overflow: hidden;text-overflow: ellipsis;word-break: break-
 .menu_box{position: fixed;bottom: 200rpx;right: 30rpx;text-align: center;}
 .menu_main{width: 100rpx;height: 100rpx;background-color: #2f7af1;border-radius: 50%;}
 .menu_title{padding: 28rpx 0;display: block;text-align: center;font-size: 30rpx;margin: 5rpx auto;color: white;}
-.shareContent{opacity: 0;}
+.shareBtn{height: 100rpx;width: 100rpx; background-color: black; opacity: 0;position: absolute;right: 0rpx;bottom:208rpx;border-radius: 50%;}

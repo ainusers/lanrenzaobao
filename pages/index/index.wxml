@@ -73,6 +73,7 @@
                     <text class='menu_title'  hidden='{{floatCircle.title.length > 0 ? flase:true}}'>{{item.title}}</text>
                 </view>
             </block>
+            <button class="shareBtn" open-type="share"></button>
         </view>
         <view catchtap='showclick' class='menu_main'>
             <text class='menu_title' hidden='{{floatCircle.title.length > 0 ? flase:true}}'>{{floatCircle.title}}</text>

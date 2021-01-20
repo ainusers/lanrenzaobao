@@ -105,7 +105,7 @@ Page({
     swichNav:function(e){
 　　　　var that = this;　
         var cur=e.target.dataset.current;
-        if(that.data.currentTaB==cur){return false;}
+        if(that.data.currentTab==cur){return false;}
         else{
             that.setData({
                 currentTab:cur
@@ -145,6 +145,7 @@ Page({
             header: {'content-type': 'application/json;charset=UTF-8;'},
             method: 'GET',
             success: res => {
+                console.log(res.data)
                 this.setData({
                     initData: res.data
                 })
