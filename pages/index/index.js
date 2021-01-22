@@ -146,7 +146,6 @@ Page({
             header: {'content-type': 'application/json;charset=UTF-8;'},
             method: 'GET',
             success: res => {
-                console.log(res.data)
                 this.setData({
                     initData: res.data
                 })
