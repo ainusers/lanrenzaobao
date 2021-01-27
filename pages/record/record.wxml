@@ -37,18 +37,20 @@
       </view>
     </view>
   </view>
-  <view class="middle">
-    <view class="record">我要反馈</view>
-    <textarea class="recordContent" maxlength="500" bindinput='listenInput' placeholder="您想说点什么?" />
-    <span class="wordwrap">{{number}}/500</span>
-  </view>
-  <view class="bottom">
-    <view class="concact">
-      <text class="way">联系方式</text>
-      <text class="communication">　注：手机号/微信/QQ</text>
+  <form bindsubmit="formSubmit">
+    <view class="middle">
+      <view class="record">我要反馈</view>
+      <textarea name="content" class="recordContent" maxlength="500" bindinput='listenInput' placeholder="您想说点什么?" />
+      <span class="wordwrap">{{number}}/500</span>
     </view>
-    <input class="concactContent" placeholder="请留下任一联系方式" bindinput="userNameInput"/>
-  </view>
-  <button class="commit" type="primary" plain="true">
-    <text class="commitContent">提交</text>
-  </button>
+    <view class="bottom">
+      <view class="concact">
+        <text class="way">联系方式</text>
+        <text class="communication">　注：手机号/微信/QQ</text>
+      </view>
+      <input name="contact" class="concactContent" placeholder="请留下任一联系方式" bindinput="userNameInput"/>
+    </view>
+    <button form-type='submit' class="commit" type="primary" plain="true">
+      <text class="commitContent">提交</text>
+    </button>
+</form>
