@@ -1,0 +1,7 @@
+<view class="notice">
+    <text class="word">{{word}}</text>
+    <image class="noticeImg" src="../../images/notice.png"></image>
+</view>
+<button class="goBtn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+    <image class="goImg" src="../../images/go.png"></image>
+</button>

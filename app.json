@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/guide/guide",
+    "pages/auth/auth",
     "pages/index/index",
     "pages/record/record"
   ],

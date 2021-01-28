@@ -61,6 +61,7 @@ Page({
             }
         })
     },
+    // 下拉操作
     scrollToLower: function(){
         // 获取当前模块的page
         let page = this.data.status[this.data.currentTab]
@@ -104,12 +105,14 @@ Page({
     },
     // 点击标题切换当前页时改变样式
     swichNav:function(e){
-　　　　var that = this;　
-        var cur=e.target.dataset.current;
-        if(that.data.currentTab==cur){return false;}
-        else{
+　　　　 var that = this;　
+        // var current=e.target.dataset.current;
+        var current=e.currentTarget.dataset.current;
+        if(that.data.currentTab==current){
+            return false;
+        }else{
             that.setData({
-                currentTab:cur
+                currentTab:current
             })
         }
     },
@@ -118,7 +121,7 @@ Page({
 　　　 var that = this;
       if (that.data.currentTab>4){
         that.setData({
-          scrollLeft:300
+          scrollLeft: 310
         })
       }else{
         that.setData({

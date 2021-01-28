@@ -10,41 +10,49 @@
     </view>
         <!-- 懒人早读 导航列表 -->
     <scroll-view scroll-x="true" class="tab" scroll-left="{{scrollLeft}}">
-        <view class="tab-title">
+        <!-- <view class="tab-title" data-current="0" bindtap="swichNav">
             <image class="img-tab" src="../../images/baidu.png"></image>
-            <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">百度</view>
+            <view class="tab-item {{currentTab==0?'active':''}}">百度</view>
         </view>
-        <view class="tab-title">
+        <view class="tab-title" data-current="1" bindtap="swichNav">
             <image class="img-tab" src="../../images/weibo.png"></image>
-            <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">微博</view>
+            <view class="tab-item {{currentTab==1?'active':''}}">微博</view>
+        </view> -->
+        <view class="tab-title" data-current="0" bindtap="swichNav">
+            <image class="img-tab" src="../../images/baidu.png"></image>
+            <view class="tab-item {{currentTab==0?'active':''}}">百度</view>
         </view>
-        <view class="tab-title">
+        <view class="tab-title" data-current="1" bindtap="swichNav">
+            <image class="img-tab" src="../../images/weibo.png"></image>
+            <view class="tab-item {{currentTab==1?'active':''}}">微博</view>
+        </view>
+        <view class="tab-title" data-current="2" bindtap="swichNav">
             <image class="img-tab" src="../../images/douyin.png"></image>
-            <view class="tab-item {{currentTab==2?'active':''}}" data-current="4" bindtap="swichNav">抖音</view>
+            <view class="tab-item {{currentTab==2?'active':''}}">抖音</view>
         </view>
-        <view class="tab-title">
+        <view class="tab-title" data-current="3" bindtap="swichNav">
             <image class="img-tab" src="../../images/zhihu.png"></image>
-            <view class="tab-item {{currentTab==3?'active':''}}" data-current="2" bindtap="swichNav">知乎</view>
+            <view class="tab-item {{currentTab==3?'active':''}}">知乎</view>
         </view>
-        <view class="tab-title">
+        <view class="tab-title" data-current="4" bindtap="swichNav">
             <image class="img-tab" src="../../images/36kr.png"></image>
-            <view class="tab-item {{currentTab==4?'active':''}}" data-current="6" bindtap="swichNav">36Kr</view>
+            <view class="tab-item {{currentTab==4?'active':''}}">36Kr</view>
         </view>
-        <view class="tab-title">
+        <view class="tab-title" data-current="5" bindtap="swichNav">
             <image class="img-tab" src="../../images/azhan.png"></image>
-            <view class="tab-item {{currentTab==5?'active':''}}" data-current="7" bindtap="swichNav">A站</view>
+            <view class="tab-item {{currentTab==5?'active':''}}">A站</view>
         </view>
-        <view class="tab-title">
+        <view class="tab-title" data-current="6" bindtap="swichNav">
             <image class="img-tab" src="../../images/bzhan.png"></image>
-            <view class="tab-item {{currentTab==6?'active':''}}" data-current="3" bindtap="swichNav">B站</view>
+            <view class="tab-item {{currentTab==6?'active':''}}">B站</view>
         </view>
-        <view class="tab-title">
+        <view class="tab-title" data-current="7" bindtap="swichNav">
             <image class="img-tab" src="../../images/juejin.png"></image>
-            <view class="tab-item {{currentTab==7?'active':''}}" data-current="8" bindtap="swichNav">掘金</view>
+            <view class="tab-item {{currentTab==7?'active':''}}">掘金</view>
         </view>
-        <view class="tab-title">
+        <view class="tab-title" data-current="8" bindtap="swichNav">
             <image class="img-tab" src="../../images/maoyan.png"></image>
-            <view class="tab-item {{currentTab==8?'active':''}}" data-current="5" bindtap="swichNav">猫眼</view>
+            <view class="tab-item {{currentTab==8?'active':''}}">猫眼</view>
         </view>
     </scroll-view>
     <!--  懒人早读 内容区域  -->

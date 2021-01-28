@@ -13,7 +13,7 @@ Page({
   onShow: function(){
     setTimeout(function(){
       wx.navigateTo({
-        url: '../index/index',
+        url: '../auth/auth',
       })
     },1500)
   }

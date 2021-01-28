@@ -9,8 +9,8 @@
 /* 隐藏scroll-view滚动条 */
 ::-webkit-scrollbar {width: 0;height: 0;color: transparent;} 
 .tab{height: 140rpx;width: 100%; overflow: hidden;line-height: 40rpx;background: #F7F7F7; font-size: 16px; white-space: nowrap;position: fixed;top: 150rpx;left: 0rpx; z-index: 99;border-radius: 20px 20px 0px 0px;}
-.tab-title{display: flex;margin: 0rpx 36rpx;display: inline-block;}
 .img-tab{height: 80rpx;width: 80rpx;}
+.tab-title{display: flex;margin: 0rpx 36rpx;display: inline-block;}
 .tab-item.active{color: #4675F9;position: relative;}
 .tab-item.tab-item{text-align: center;}
 
@@ -18,8 +18,7 @@
 .tab-content{margin-top: 290rpx;}
 .item-content{font-size: 12px;display: flex;justify-content: space-between;box-sizing: border-box; height: 8vh;align-items: center;border-bottom: 1px solid #F2F2F2;}
 .item-left{width:50rpx;padding-left: 10rpx;padding-right: 30rpx;}
-.item-middle{width: 100vw;
-display: -webkit-box;overflow: hidden;text-overflow: ellipsis;word-break: break-all;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+.item-middle{width: 100vw;display: -webkit-box;overflow: hidden;text-overflow: ellipsis;word-break: break-all;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
 .item-right{width:140rpx;text-align: right;padding-right: 10rpx;}
 
 /* 懒人早读 悬浮按钮 */

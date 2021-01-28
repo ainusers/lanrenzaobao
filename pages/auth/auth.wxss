@@ -1,0 +1,8 @@
+/* 公告区域 */
+.notice{height: 400px;width: 300px;position: relative;left: 11vw;top: 10vh;}
+.noticeImg{height: 400px;width: 300px;position: relative;box-shadow: #666 0px 0px 10px;border-radius: 15px;}
+.word{position: relative;z-index: 99;top: 15vh;font-size: 18px;font-weight: 1000;left: 8vw;color: #2f7af1;}
+
+/* 用户授权/跳转按钮 */
+.goBtn{height: 150rpx;width: 150rpx; background-color: #2f7af1; border-radius: 50%;position: relative;top: 15vh;}
+.goImg{height: 130rpx;width: 130rpx;border-radius: 50%;margin: 5px -10px;}

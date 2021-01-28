@@ -31,20 +31,24 @@ Page({
       header: {'content-type': 'application/json;charset=UTF-8;'},
       method: 'GET',
       success: res => {
-          console.log(res.data === true)
           if(res.data === true){
             wx.showToast({
               title: '提交成功',
               icon: 'success',
-              duration: 2000
+              duration: 1500
              })
           }else{
             wx.showToast({
               title: '提交失败',
               icon: 'none',
-              duration: 2000
+              duration: 1500
              })
           }
+          setTimeout(function(){
+            wx.navigateTo({
+              url: '../index/index',
+            })
+          },1500)
       }
     })
   },
