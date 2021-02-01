@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    word:' 女人，只会影响我拔刀的速度。 '
+    word:'世界上最好的心理医生，是时间。'
   },
   // 获取用户信息
   getUserInfo: function(e) {
@@ -20,17 +20,19 @@ Page({
       let gender = e.detail.userInfo.gender === 1 ? "男" : "女"
       let avatarUrl = e.detail.userInfo.avatarUrl
       let user = '<' + nickName + '> - {' + country + ' - ' + province + ' - ' + city + '} - <' + gender + '> - {' + avatarUrl +'}';
+      // 效率优先：先跳转
+      wx.navigateTo({
+        url: '../index/index',
+      })
+      // 用户统计功能
       wx.request({
-        url: 'http://192.168.2.130:8888/service/statistics',
+        url: 'https://www.lanrenzaodu.top:8888/service/statistics',
         data: {message:user},
         header: {'content-type': 'application/json;charset=UTF-8;'},
         method: 'GET',
         success: res => {
           // 成功统计用户信息
         }
-    })
-    wx.navigateTo({
-      url: '../index/index',
     })
     } else {
       this.showModal()

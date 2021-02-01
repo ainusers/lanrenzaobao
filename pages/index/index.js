@@ -35,7 +35,7 @@ Page({
     // 上拉加载
     getPageData(page) {
         wx.request({
-            url: 'http://192.168.2.130:8888/service/page',
+            url: 'https://www.lanrenzaodu.top:8888/service/page',
             header: {'content-type': 'application/json;charset=UTF-8;'},
             method: 'GET',
             data: {page: page,type: this.data.currentTab}, 
@@ -77,7 +77,7 @@ Page({
     // 下拉刷新
     refresh(){
         wx.request({
-            url: 'http://192.168.2.130:8888/service/refresh',
+            url: 'https://www.lanrenzaodu.top:8888/service/refresh',
             data:{type:this.data.currentTab},
             header: {'content-type': 'application/json;charset=UTF-8;'},
             method: 'GET',
@@ -145,7 +145,7 @@ Page({
         });
         // 初始化热点数据
         wx.request({
-            url: 'http://192.168.2.130:8888/service/init',
+            url: 'https://www.lanrenzaodu.top:8888/service/init',
             header: {'content-type': 'application/json;charset=UTF-8;'},
             method: 'GET',
             success: res => {
@@ -156,7 +156,7 @@ Page({
         })
         // 开启轮询后台接口
         wx.request({
-            url: 'http://192.168.2.130:8888/service/time',
+            url: 'https://www.lanrenzaodu.top:8888/service/time',
             header: {'content-type': 'application/json;charset=UTF-8;'},
             method: 'GET',
             success: res => {

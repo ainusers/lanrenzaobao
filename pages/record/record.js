@@ -26,7 +26,7 @@ Page({
       'contact': e.detail.value.contact
     })
     wx.request({
-      url: 'http://192.168.2.130:8888/service/submit',
+      url: 'https://www.lanrenzaodu.top:8888/service/submit',
       data:{content:this.data.content,contact:this.data.contact},
       header: {'content-type': 'application/json;charset=UTF-8;'},
       method: 'GET',
