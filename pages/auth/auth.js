@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    word:'世界上最好的心理医生，是时间。'
+    word:''
   },
   // 获取用户信息
   getUserInfo: function(e) {
@@ -62,7 +62,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      // 心灵鸡汤
+      let arr =['世界上最好的心理医生，是时间','去做你不敢做的事，这就是成长','女人，只会影响我拔刀的速度']
+      let index = Math.floor((Math.random() * arr.length)); 
+      this.setData({
+        word: arr[index]
+      })
   },
 
   /**
