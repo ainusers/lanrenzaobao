@@ -63,7 +63,7 @@ Page({
    */
   onLoad: function (options) {
       // 心灵鸡汤
-      let arr =['世界上最好的心理医生，是时间','去做你不敢做的事，这就是成长','女人，只会影响我拔刀的速度']
+      let arr =['世界上最好的心理医生，是时间','去做你不敢做的事，这就是成长','女人，只会影响我拔刀的速度','即使千万人在前，我要战，那便战']
       let index = Math.floor((Math.random() * arr.length)); 
       this.setData({
         word: arr[index]
