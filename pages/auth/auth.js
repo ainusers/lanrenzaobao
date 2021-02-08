@@ -26,7 +26,7 @@ Page({
       })
       // 用户统计功能
       wx.request({
-        url: 'https://www.lanrenzaodu.top:8888/service/statistics',
+        url: 'https://www.lanrenzaodu.top/service/statistics',
         data: {message:user},
         header: {'content-type': 'application/json;charset=UTF-8;'},
         method: 'GET',
